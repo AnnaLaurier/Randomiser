@@ -7,7 +7,8 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+final class SettingsViewController: UIViewController {
+
     @IBOutlet weak var minimumValueTF: UITextField!
     @IBOutlet weak var maximumValueTF: UITextField!
 

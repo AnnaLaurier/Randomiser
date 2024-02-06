@@ -88,7 +88,7 @@
                     <navigationItem key="navigationItem" title="Random Number " id="gRh-01-X00">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="O0h-69-YVN">
                             <connections>
-                                <segue destination="3b1-lJ-HDE" kind="showDetail" id="5Pf-gJ-UJg"/>
+                                <segue destination="3b1-lJ-HDE" kind="presentation" id="WiS-HR-qg5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -137,6 +137,7 @@
                                         <state key="normal" title="Save"/>
                                         <connections>
                                             <action selector="cancelButtonTapped" destination="3b1-lJ-HDE" eventType="touchUpInside" id="rbY-TU-jjE"/>
+                                            <segue destination="aPR-GF-wyg" kind="unwind" unwindAction="unwindFor:" id="Fje-oy-XOH"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOu-u0-aq0">
@@ -170,6 +171,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qhs-Tb-TlN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="aPR-GF-wyg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1570.0934579439252" y="1.9438444924406049"/>
         </scene>
