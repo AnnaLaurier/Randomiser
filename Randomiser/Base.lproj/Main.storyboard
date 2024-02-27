@@ -88,12 +88,12 @@
                     <navigationItem key="navigationItem" title="Random Number " id="gRh-01-X00">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="O0h-69-YVN">
                             <connections>
-                                <segue destination="3b1-lJ-HDE" kind="presentation" id="WiS-HR-qg5"/>
+                                <segue destination="rrN-ad-0nU" kind="presentation" id="WiS-HR-qg5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="getNumberButton" destination="pYf-qS-ZUt" id="Pup-FF-JW2"/>
+                        <outlet property="getRandomNumberButton" destination="pYf-qS-ZUt" id="Pup-FF-JW2"/>
                         <outlet property="maximumValueLabel" destination="5fN-X4-1kb" id="3nf-5Z-9j3"/>
                         <outlet property="minimumValueLabel" destination="wC3-Jg-2pb" id="z7p-sN-k05"/>
                         <outlet property="randomValueLabel" destination="7gi-rE-anp" id="M1Z-E1-PtB"/>
@@ -112,7 +112,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="kd8-YV-FhG">
-                                <rect key="frame" x="60" y="60" width="308" height="108"/>
+                                <rect key="frame" x="60" y="116" width="308" height="108"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R6q-2h-p19">
                                         <rect key="frame" x="0.0" y="0.0" width="308" height="34"/>
@@ -137,6 +137,7 @@
                                         <state key="normal" title="Save"/>
                                         <connections>
                                             <action selector="cancelButtonTapped" destination="3b1-lJ-HDE" eventType="touchUpInside" id="rbY-TU-jjE"/>
+                                            <action selector="saveButtonTapped" destination="3b1-lJ-HDE" eventType="touchUpInside" id="9co-z6-KVv"/>
                                             <segue destination="aPR-GF-wyg" kind="unwind" unwindAction="unwindFor:" id="Fje-oy-XOH"/>
                                         </connections>
                                     </button>
@@ -173,7 +174,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qhs-Tb-TlN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="aPR-GF-wyg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1570.0934579439252" y="1.9438444924406049"/>
+            <point key="canvasLocation" x="2470.0934579439249" y="1.9438444924406049"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KTy-BB-iWx">
@@ -193,6 +194,24 @@
             </objects>
             <point key="canvasLocation" x="-46.046511627906973" y="3.218884120171674"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YQY-QN-K8p">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rrN-ad-0nU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qci-XI-dm7">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3b1-lJ-HDE" kind="relationship" relationship="rootViewController" id="1FM-xa-GJB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q65-Sw-vGA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1682" y="2"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="groupTableViewBackgroundColor">
@@ -202,13 +221,13 @@
             <color white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

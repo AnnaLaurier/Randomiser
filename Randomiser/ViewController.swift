@@ -7,36 +7,60 @@
 
 import UIKit
 
+protocol SettingsViewControllerDelegate {
+    func setNewValues(for randomNumber: RandomNumber)
+}
+
 final class ViewController: UIViewController {
 
     @IBOutlet weak var minimumValueLabel: UILabel!
     @IBOutlet weak var maximumValueLabel: UILabel!
     @IBOutlet weak var randomValueLabel: UILabel!
 
-    @IBOutlet weak var getNumberButton: UIButton!
+    @IBOutlet weak var getRandomNumberButton: UIButton!
+
+    private var randomNumber = RandomNumber(minimumValue: 0, maximumValue: 100)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getNumberButton.layer.cornerRadius = 10
+
+        getRandomNumberButton.layer.cornerRadius = 10
+
+        minimumValueLabel.text = String(randomNumber.minimumValue)
+        maximumValueLabel.text = String(randomNumber.maximumValue)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let settingsVC = segue.destination as? SettingsViewController else {return}
+        guard 
+            let navigationVC = segue.destination as? UINavigationController,
+            let settingsVC = navigationVC.topViewController as? SettingsViewController
+        else {
+            return
+        }
 
-        settingsVC.minimumValue = minimumValueLabel.text
-        settingsVC.maximumValue = maximumValueLabel.text
+        settingsVC.randomNumber = randomNumber
+
+        settingsVC.delegate = self
     }
 
     @IBAction func getRandomNumberTapped() {
-        let minimumNumber = Int(minimumValueLabel.text ?? "") ?? 0
-        let maximumNumber = Int(maximumValueLabel.text ?? "") ?? 100
-
-        randomValueLabel.text = String(Int.random(in: minimumNumber ... maximumNumber))
+        randomValueLabel.text = String(randomNumber.getRandom)
     }
 
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard let settingsVC = segue.source as? SettingsViewController else {return}
+        guard let settingsVC = segue.source as? SettingsViewController else {
+            return
+        }
+
         minimumValueLabel.text = settingsVC.minimumValueTF.text
         maximumValueLabel.text = settingsVC.maximumValueTF.text
+    }
+}
+
+extension ViewController: SettingsViewControllerDelegate {
+    func setNewValues(for randomNumber: RandomNumber) {
+        minimumValueLabel.text = String(randomNumber.minimumValue)
+        maximumValueLabel.text = String(randomNumber.maximumValue)
+        self.randomNumber = randomNumber
     }
 }

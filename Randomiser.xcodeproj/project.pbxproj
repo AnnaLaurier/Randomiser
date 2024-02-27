@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		441251B92B8E111200102982 /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441251B82B8E111200102982 /* RandomNumber.swift */; };
 		44E42EE92B70FE3B003A2D28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E42EE82B70FE3B003A2D28 /* AppDelegate.swift */; };
 		44E42EEB2B70FE3B003A2D28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E42EEA2B70FE3B003A2D28 /* SceneDelegate.swift */; };
 		44E42EED2B70FE3B003A2D28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E42EEC2B70FE3B003A2D28 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		441251B82B8E111200102982 /* RandomNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 		44E42EE52B70FE3B003A2D28 /* Randomiser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Randomiser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E42EE82B70FE3B003A2D28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44E42EEA2B70FE3B003A2D28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				44E42EE82B70FE3B003A2D28 /* AppDelegate.swift */,
 				44E42EEA2B70FE3B003A2D28 /* SceneDelegate.swift */,
+				441251B82B8E111200102982 /* RandomNumber.swift */,
 				44E42EEC2B70FE3B003A2D28 /* ViewController.swift */,
 				44E42EEE2B70FE3B003A2D28 /* Main.storyboard */,
 				44E42EFC2B710955003A2D28 /* SettingsViewController.swift */,
@@ -143,6 +146,7 @@
 			files = (
 				44E42EED2B70FE3B003A2D28 /* ViewController.swift in Sources */,
 				44E42EE92B70FE3B003A2D28 /* AppDelegate.swift in Sources */,
+				441251B92B8E111200102982 /* RandomNumber.swift in Sources */,
 				44E42EEB2B70FE3B003A2D28 /* SceneDelegate.swift in Sources */,
 				44E42EFD2B710955003A2D28 /* SettingsViewController.swift in Sources */,
 			);
